@@ -8,7 +8,7 @@ ffmpeg-python
 gitpython
 hachoir
 heroku3
-httpx==0.27.0
+httpx
 motor
 pillow
 psutil
@@ -24,7 +24,7 @@ tgcrypto
 unidecode
 yt-dlp
 youtube-search
-youtube-search-python==1.6.6
+git+https://github.com/BillaSpace/youtube-search-python.git
 flask_restful
 flask
 gunicorn
