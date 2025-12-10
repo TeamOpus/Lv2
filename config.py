@@ -20,7 +20,8 @@ API_URL = getenv("API_URL", "")
 # Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = getenv("MONGO_DB_URI", "")
 
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 999999))
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 5256000))
+# ~10 years in minutes (practically unlimited)
 
 # Chat id of a group for logging bot's activities
 LOGGER_ID = int(getenv("LOGGER_ID", ""))
@@ -36,15 +37,15 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/kxunal/Lv2",
+    "https://github.com/TeamOpus/Lv2",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "mainr")
 GIT_TOKEN = getenv(
-    "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"
+    "GIT_TOKEN"
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/storm_techh")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/storm_core")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/sonucheatsofficial")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/sonucheatsofficial")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -60,10 +61,9 @@ PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", 450))
 
 
 # Telegram audio and video file size limit (in bytes)
-TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", 104857600))
-TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
-# Checkout https://www.gbmb.org/mb-to-bytes for converting mb to bytes
-
+TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", 53687091200))
+TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 53687091200))
+# 50 GB = 53,687,091,200 bytes
 
 # Get your pyrogram v2 session from @StringFatherBot on Telegram
 STRING1 = getenv("STRING_SESSION", "")
